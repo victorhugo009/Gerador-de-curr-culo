@@ -1,0 +1,545 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  color: #555;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+button {
+  display: block;
+  margin: 20px auto 0;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#resultado {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+/* Currículo */
+#curriculo {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 700px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Cabeçalho com nome e foto lado a lado */
+#curriculo .cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+  #curriculo .foto {
+  width: 100px;  /* 3 cm */
+  height: 130px;   /* 4.0 cm */
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffff; /* opcional, pra mostrar fundo se não tiver foto */
+}
+
+#curriculo .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+#curriculo h2 {
+  margin: 0;
+  color: #007BFF;
+}
+
+/* Contatos lado a lado */
+#curriculo .contatos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+#curriculo .contatos p {
+  margin: 0;
+  min-width: 150px;
+}
+
+#curriculo p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #333;
+}
+
+#curriculo h3 {
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  color: #007BFF;
+}
+
+/* Estilo para experiências dentro do formulário */
+#experiencias-container {
+  margin-top: 15px;
+  position: relative;
+}
+
+.experiencia-item {
+  background: #e9ecef;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experiencia-item label {
+  font-weight: bold;
+  display: block;
+  margin-top: 8px;
+}
+
+.experiencia-item input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 3px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#baixarPDF {
+  display: block;
+  margin: 20px auto;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#baixarPDF:hover {
+  background: #1e7e34;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+.cabecalho {
+    display: flex;
+    gap: 15px; /* espaço entre foto e texto */
+    align-items: flex-start;
+}
+
+.cabecalho .foto {
+    width: 90px;      /* 3 */
+    height: 120px;    /* x4 proporção */
+    overflow: hidden;
+    border-radius: 4px;
+    flex-shrink: 0; /* impede de diminuir */
+}
+
+.cabecalho .foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* corta o excesso */
+    object-position: center; /* centraliza o rosto */
+}
+#curriculo.template1 {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 700px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+#curriculo.template1 .cabecalho {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#curriculo.template1 .foto {
+  width: 100px;
+  height: 130px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+#curriculo.template1 .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#curriculo.template1 h2 {
+  margin: 0;
+  color: #007BFF;
+}
+
+#curriculo.template1 .contatos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+#curriculo.template1 .contatos p {
+  margin: 0;
+  min-width: 150px;
+}
+
+#curriculo.template1 p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #333;
+}
+
+#curriculo.template1 h3 {
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  color: #007BFF;
+}
+.template2 {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.template2 .sidebar {
+  background: #007BFF; /* azul */
+  color: white;
+  padding: 20px;
+  width: 250px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+.template2 .sidebar .foto img {
+  width: 120px;
+  height: 160px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.template2 main {
+  flex: 1;
+  padding: 20px 30px;
+  color: #333;
+}
+.template2 .sidebar .foto {
+  width: 100px;
+  height: 130px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 4px;
+}
+/* ===== Ajuste universal para fotos nos templates ===== */
+.foto-container {
+  width: 100px;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.foto-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;      /* mantém proporção */
+  background-position: center; /* centraliza */
+
+}
+.template1 .foto-container {
+  width: 200px;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.template1 .foto-bg{
+      background-size: cover;      /* mantém proporção */
+  background-position: center; /* centraliza */
+}
+
+/* Se algum template tiver tamanho de foto diferente, personalize assim: */
+.template3 .foto-container {
+  width: 110px;
+  height: 140px;
+}
+
+.template5 .foto-container {
+  width: 90px;
+  height: 120px;
+}
+
+.template2 .sidebar {
+  background: #007BFF; /* azul */
+  padding: 20px;
+  width: 250px;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: left;
+  font-weight: 600;
+  /* Adicionado para garantir texto branco */
+  color: white !important;
+}
+
+.template2 .sidebar * {
+  color: white !important;  /* força branco em todos os filhos */
+}
+
+.template2 .sidebar h2.nome-barra {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Cor do nome principal no topo da área principal */
+.template2 .nome-principal {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #007BFF;
+}
+
+/* Template 3 - Cabeçalho colorido */
+.template3 {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px 30px;
+}
+
+.template3 header {
+  background: #007BFF;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  border-radius: 8px 8px 0 0;
+  gap: 20px;
+}
+
+.template3 header .foto-cabecalho img {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.template3 header .info-cabecalho h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.template3 header .info-cabecalho p {
+  margin: 4px 0;
+  font-size: 1rem;
+}
+/* Cor do nome principal no topo da área principal */
+.template3 .nome-principal {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+  background-color: #0056b3;
+  padding: 5px;
+  border-radius: 10px;
+}
+#curriculo.template4 {
+  max-width: 700px;
+  background: white;
+  padding: 25px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  border: 2px solid #007BFF;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+#curriculo.template4 .cabecalho {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#curriculo.template4 .foto {
+  width: 90px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f0f0f0;
+  flex-shrink: 0;
+}
+
+#curriculo.template4 .foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#curriculo.template4 h2 {
+  margin: 0 0 8px 0;
+  color: #007BFF;
+}
+
+#curriculo.template4 p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+#curriculo.template4 h3 {
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 6px;
+  margin-top: 25px;
+  font-weight: 600;
+  color: #007BFF;
+}
+/* Template 5 - Corporativo */
+.template5 {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  padding: 25px 35px;
+  color: #222;
+}
+
+.template5 header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.template5 header .foto-corporativo img {
+  width: 100px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.template5 header .info-corporativo h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #004080;
+}
+
+.template5 header .info-corporativo p {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #444;
+}
+.lixo {
+  width: 43px;
+}
+#button-lixo {
+  margin: 0 !important;
+  display: flex;
+  justify-self: right;
+  background-color: #f3f2f7;
+  padding: 3px;
+}
+.separa-experiencia {
+  display: flex;
+  flex-wrap: wrap;
+}
+#listaExperiencias {
+  margin: 20px;
+}
+#button-lixo :hover {
+  background-color: #f3f2f7;
+}
